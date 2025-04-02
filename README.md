@@ -2,7 +2,7 @@
 
 <small>Em andamento⏳</small>
 
-**br:** Plataforma de treinamentos corporativos para publicação e centralização de videos e conteúdos de melhoria técnica e comportamental de colaboradores internos de uma empresa.
+**br:** Plataforma de treinamentos corporativos para publicação e centralização de videos e conteúdos de melhoria técnica e comportamental de colaboradores internos de uma empresa. <br/>
 **en:** Corporate training platform for publishing and centralizing videos and content for technical and behavioral improvement of a company's internal employees.
 
 ## 🐋 Container
