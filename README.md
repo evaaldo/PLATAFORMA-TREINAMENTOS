@@ -16,6 +16,6 @@ docker-compose up --build
 docker-compose down
 ```
 
-### 📸 Imagem do projetos
+### 📸 Imagem do projeto
 
 ![image](https://github.com/user-attachments/assets/c09ccf1d-6915-4726-8963-e008f8f0a656)
