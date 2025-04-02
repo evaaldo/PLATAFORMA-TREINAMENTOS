@@ -1,5 +1,9 @@
+import { Training } from "./pages/Training";
+
 export function App() {
   return (
-      <h1>Hello World</h1>
+      <div>
+        <Training />
+      </div>
   )
 }
