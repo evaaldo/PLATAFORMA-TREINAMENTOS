@@ -1,5 +1,38 @@
-export function Lesson() {
+import { CheckCircle, Lock } from "phosphor-react";
+import { Link } from "react-router-dom";
+
+interface LessonProps {
+    date: string;
+    isAvailable: boolean;
+    lessonType: "live" | "class";
+    title: string;
+}
+
+export function Lesson(props: LessonProps) {
     return (
-        <h1>Lesson</h1>
+        <Link to={`/`} className="group">
+            <span className="text-gray-700 mb-2">{ props.date }</span>
+            <div className="flex flex-col gap-2 border p-3 rounded border-black mt-2 group-hover:border-blue-700 cursor-pointer">
+                <header className="flex justify-between">
+                    {props.isAvailable ? (
+                        <span className="flex items-center text-sm gap-1 text-blue-300">
+                            <CheckCircle size={20} />
+                            Conteúdo liberado
+                        </span>) : (
+                        <span className="flex items-center text-sm gap-1 text-orange-700">
+                            <Lock size={20} />
+                            Em breve
+                        </span>
+                    )}       
+                    { props.lessonType === "live" ? (
+                        <span className="text-sm border rounded border-blue-700 bg-blue-700 text-white px-[0.35rem] py-[0.125rem]">AO VIVO</span>) : (
+                        <span className="text-sm border rounded border-blue-700 bg-blue-700 text-white px-[0.35rem] py-[0.125rem]">AULA PRÁTICA</span>
+                        )
+                    } 
+                           
+                </header>
+                <span className="">{ props.title }</span>
+            </div>
+        </Link>
     )
 }

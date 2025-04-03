@@ -1,9 +1,10 @@
-import { Training } from "./pages/Training";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./Router";
 
 export function App() {
   return (
-      <div className="font-sans">
-        <Training />
-      </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   )
 }
