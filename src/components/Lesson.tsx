@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 interface LessonProps {
     date: string;
+    videoId: string;
     isAvailable: boolean;
     lessonType: "live" | "class";
     title: string;
@@ -10,9 +11,9 @@ interface LessonProps {
 
 export function Lesson(props: LessonProps) {
     return (
-        <Link to={`/`} className="group">
+        <Link to={`/${props.videoId}`} className="group">
             <span className="text-gray-700 mb-2">{ props.date }</span>
-            <div className="flex flex-col gap-2 border p-3 rounded border-black mt-2 group-hover:border-blue-700 cursor-pointer">
+            <div className="flex flex-col gap-2 border p-3 rounded border-black mt-2 group-hover:border-gray-500 cursor-pointer">
                 <header className="flex justify-between">
                     {props.isAvailable ? (
                         <span className="flex items-center text-sm gap-1 text-blue-300">

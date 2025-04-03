@@ -5,6 +5,7 @@ export function Router() {
     return (
         <Routes>
             <Route path="/" element={<Training />} />
+            <Route path="/:videoId" element={<Training />} />
         </Routes>
     )
 }
