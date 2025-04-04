@@ -25,11 +25,11 @@ export function Video(props: VideoProps) {
                         <p className="text-gray-700 mt-3 text-lg">Nessa aula vamos dar início ao entendimento da estrutura base do treinamento que será feito</p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <Link to={`/notFound`} className="bg-blue-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1">
+                        <Link to={`/notFound`} className="bg-blue-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg">
                             <Globe size={18} />
                             Intranet
                         </Link>
-                        <Link to={`/notFound`} className="bg-gray-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1">
+                        <Link to={`/notFound`} className="bg-gray-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg">
                             <Lightning size={18} />
                             Acesse o desafio
                         </Link>

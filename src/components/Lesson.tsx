@@ -1,4 +1,5 @@
 import { CheckCircle, Lock } from "phosphor-react";
+import { useCallback } from "react";
 import { Link } from "react-router-dom";
 
 interface LessonProps {
@@ -10,8 +11,14 @@ interface LessonProps {
 }
 
 export function Lesson(props: LessonProps) {
+    const reload = useCallback(() => {
+        setTimeout(() => {
+            window.location.reload();
+        }, 50);
+    }, []);
+
     return (
-        <Link to={`/${props.videoId}`} className="group">
+        <Link to={`/${props.videoId}`} className="group" onClick={reload}>
             <span className="text-gray-700 mb-2">{ props.date }</span>
             <div className="flex flex-col gap-2 border p-3 rounded border-black mt-2 group-hover:border-gray-500 cursor-pointer">
                 <header className="flex justify-between">
