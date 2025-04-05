@@ -1,16 +1,9 @@
 import { CheckCircle, Lock } from "phosphor-react";
 import { useCallback } from "react";
 import { Link } from "react-router-dom";
+import { LessonType } from "../models/Lesson";
 
-interface LessonProps {
-    date: string;
-    videoId: string;
-    isAvailable: boolean;
-    lessonType: "live" | "class";
-    title: string;
-}
-
-export function Lesson(props: LessonProps) {
+export function Lesson(props: LessonType) {
     const reload = useCallback(() => {
         setTimeout(() => {
             window.location.reload();
@@ -32,7 +25,7 @@ export function Lesson(props: LessonProps) {
                             Em breve
                         </span>
                     )}       
-                    { props.lessonType === "live" ? (
+                    { props.isLive ? (
                         <span className="text-sm border rounded border-blue-700 bg-blue-700 text-white px-[0.35rem] py-[0.125rem]">AO VIVO</span>) : (
                         <span className="text-sm border rounded border-blue-700 bg-blue-700 text-white px-[0.35rem] py-[0.125rem]">AULA PRÁTICA</span>
                         )
