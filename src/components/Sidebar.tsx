@@ -12,8 +12,6 @@ export function Sidebar() {
             .catch(error => console.log("Erro: " + error))
     }, []);
 
-    console.log(data);
-
     return (
         <aside className="w-[20vw] p-6 shadow-lg">
             <span className="font-bold text-2xl pb-6 mb-6 block border-b border-gray-600">
