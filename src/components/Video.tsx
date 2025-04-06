@@ -30,11 +30,11 @@ export function Video(props: VideoProps) {
                         <p className="text-gray-700 mt-3 text-lg">{props.description}</p>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <Link to={`/notFound`} className="bg-blue-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg">
+                        <Link to={`/notFound`} className="bg-blue-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg hover:bg-blue-300 transition-all duration-300 ease-in-out">
                             <Globe size={18} />
                             Intranet
                         </Link>
-                        <Link to={`/notFound`} className="bg-gray-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg">
+                        <Link to={`/notFound`} className="bg-gray-700 text-white text-center px-2 py-3 rounded flex justify-center items-center gap-1 shadow-lg hover:bg-black transition-all duration-300 ease-in-out">
                             <Lightning size={18} />
                             Acesse o desafio
                         </Link>
