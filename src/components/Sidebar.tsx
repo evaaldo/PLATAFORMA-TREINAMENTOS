@@ -26,7 +26,11 @@ export function Sidebar() {
                         isLive={lesson.isLive}
                         title={lesson.title}
                     />
-                )) : (<h1>Nenhuma aula cadastrada!</h1>)}
+                )) : (
+                    <div className="m-auto">
+                        <img src="/erro-cronograma-aulas.svg" />
+                    </div>
+                )}
             </div>
         </aside>
     )
