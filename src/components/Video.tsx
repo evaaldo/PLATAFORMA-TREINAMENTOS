@@ -20,14 +20,17 @@ export function Video() {
     }, [videoId]);
 
     console.log(data)
+    console.log("videoId: " + videoId);
 
     return (<div className="flex-1 flex-col">
                 <div className="bg-black flex justify-center">
                     <div className="text-white h-full w-full max-h-[100vh] max-w-[1100px] aspect-video">
-                        <Player>
-                            <Youtube videoId={data?.videoId ?? ''}></Youtube>
-                            <DefaultUi />
-                        </Player>
+                        { videoId ? (
+                            <Player>
+                                <Youtube videoId={videoId}></Youtube>
+                                <DefaultUi />
+                            </Player>) : (<h1>Vídeo não encontrado</h1>)
+                        }
                     </div>
                 </div>
                 <div className="p-6 w-[80%] flex justify-center flex-col m-auto gap-6">
