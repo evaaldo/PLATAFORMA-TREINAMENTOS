@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: DB.PLATAFORMA.TREINAMENTOS
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgress
+      - POSTGRES_PASSWORD=230520
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  api:
+    build: ./API.PLATAFORMA.TREINAMENTOS
+    container_name: API.PLATAFORMA.TREINAMENTOS
+    ports:
+      - "3000:3000"
+    environment:
+      SECRET_KEY_BASE: 2f1590b7d362faebfccdeb60ae9877873b0e1012a536d2d0cdd86a82a4a097a15e1ebf21bff71a57a7f1324a86a4fddf328766b28cdaf5611954b5be46af0ca1
+    depends_on:
+      db:
+        condition: service_healthy
+  front:
+    build: ./FRONT.PLATAFORMA.TREINAMENTOS
+    container_name: FRONT.PLATAFORMA.TREINAMENTOS
+    ports:
+      - "3005:3005"
+volumes:
+  pgdata:

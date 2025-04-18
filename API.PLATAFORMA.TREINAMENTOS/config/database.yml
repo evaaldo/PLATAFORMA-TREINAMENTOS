@@ -1,0 +1,43 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: evaaldo
+  password: 230520
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: api_plataforma_treinamentos_development
+  host: db
+
+production:
+  <<: *default
+  database: api_plataforma_treinamentos_development
+  username: evaaldo
+  password: 230520
+  host: db
+
+queue:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: api_plataforma_treinamentos_development
+  username: evaaldo
+  password: 230520
+  host: db
+
+cache:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: api_plataforma_treinamentos_development
+  username: evaaldo
+  password: 230520
+  host: db
+
+cable:
+  <<: *default
+  database: api_plataforma_treinamentos_development
+  username: evaaldo
+  password: 230520
+  host: db

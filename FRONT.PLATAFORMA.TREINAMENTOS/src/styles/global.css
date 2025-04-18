@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .shimmer {
+    background: linear-gradient(
+      to right,
+      #e2e8f0 0%,
+      #f8fafc 20%,
+      #e2e8f0 40%,
+      #e2e8f0 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 1.5s infinite linear;
+    /* Extra (opcional) */
+    color: transparent;
+  }
